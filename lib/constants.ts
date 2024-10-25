@@ -74,7 +74,7 @@ export const accuracy = [
 // ];
 
 // export const b = [-0.654 / 8, 24.016 / 4.056, -54.567 / 0.2, 64.78 / 12];
-export const A: AMatrixItem[][] = [
+export const A1: AMatrixItem[][] = [
   [
     { name: "x1", value: 12 },
     { name: "x2", value: -3.8 },
@@ -101,43 +101,43 @@ export const A: AMatrixItem[][] = [
   ],
 ];
 
-export const b = [-64.78, 0.654, -24.016, 54.567];
-// export const A: AMatrixItem[][] = [
-//   [
-//     { name: "x1", value: 10 },
-//     { name: "x2", value: 2 },
-//     { name: "x3", value: 1 },
-//     { name: "x4", value: 4 },
-//   ],
-//   [
-//     { name: "x1", value: 2 },
-//     { name: "x2", value: 110 },
-//     { name: "x3", value: -2 },
-//     { name: "x4", value: 7 },
-//   ],
-//   [
-//     { name: "x1", value: 6.666 },
-//     { name: "x2", value: 2.3 },
-//     { name: "x3", value: -15.6 },
-//     { name: "x4", value: 1 },
-//   ],
-//   [
-//     { name: "x1", value: 1 },
-//     { name: "x2", value: 1.3 },
-//     { name: "x3", value: 9.9 },
-//     { name: "x4", value: 30 },
-//   ],
-// ];
+export const b1 = [-64.78, 0.654, -24.016, 54.567];
+export const A2: AMatrixItem[][] = [
+  [
+    { name: "x1", value: 10 },
+    { name: "x2", value: 2 },
+    { name: "x3", value: 1 },
+    { name: "x4", value: 4 },
+  ],
+  [
+    { name: "x1", value: 2 },
+    { name: "x2", value: 110 },
+    { name: "x3", value: -2 },
+    { name: "x4", value: 7 },
+  ],
+  [
+    { name: "x1", value: 6.666 },
+    { name: "x2", value: 2.3 },
+    { name: "x3", value: -15.6 },
+    { name: "x4", value: 1 },
+  ],
+  [
+    { name: "x1", value: 1 },
+    { name: "x2", value: 1.3 },
+    { name: "x3", value: 9.9 },
+    { name: "x4", value: 30 },
+  ],
+];
 
-// export const b = [-10.78, 11.554, -20.016, 204.751];
+export const b2 = [-10.78, 11.554, -20.016, 204.751];
 // export const b = [0.654, -24.016, 54.567, -64.78];
-export const Aarg = A.map((row) => {
-  return row.map((item) => {
-    return {
-      name: item.name,
-      value: item.value / 100,
-    };
-  });
-});
+// export const Aarg = A.map((row) => {
+//   return row.map((item) => {
+//     return {
+//       name: item.name,
+//       value: item.value / 100,
+//     };
+//   });
+// });
 
-export const barg = b.map((item) => item / 100);
+// export const barg = b.map((item) => item / 100);

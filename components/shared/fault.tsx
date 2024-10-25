@@ -1,7 +1,10 @@
+"use client";
+
 import { calcFault } from "@/lib";
-import { A, accuracy, b } from "@/lib/constants";
+import { A1, A2, accuracy, b1, b2 } from "@/lib/constants";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 interface Props {
   roots: {
@@ -13,6 +16,10 @@ interface Props {
 }
 
 export const Fault: React.FC<Props> = ({ roots, className }) => {
+  const pathname = usePathname();
+  const A = pathname === "/equation" ? A2 : A1;
+  const b = pathname === "/equation" ? b2 : b1;
+
   const faults = roots.map((item, index) => {
     return calcFault(A, item.betweenValues[index], b);
   });

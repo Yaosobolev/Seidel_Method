@@ -1,7 +1,7 @@
 "use client";
 
 import { iterationCalcSeidel } from "@/lib";
-import { A, accuracy, b } from "@/lib/constants";
+import { A1, A2, accuracy, b1, b2 } from "@/lib/constants";
 
 import {
   Table,
@@ -13,6 +13,7 @@ import {
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 interface Props {
   onRootsHandler: (
@@ -29,6 +30,11 @@ export const TableResultCalc: React.FC<Props> = ({
   className,
   onRootsHandler,
 }) => {
+  const pathname = usePathname();
+
+  const A = pathname === "/equation" ? A2 : A1;
+  const b = pathname === "/equation" ? b2 : b1;
+
   const resultCalc = accuracy.map((item) => {
     return iterationCalcSeidel(A, b, item);
   });
