@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "startdev": "npx --max-old-space-size=4096 next dev",
     "lint": "next lint"
   },
   "dependencies": {
