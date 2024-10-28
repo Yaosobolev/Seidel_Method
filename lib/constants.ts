@@ -18,7 +18,7 @@ export const accuracy = [
   { base: 10, exponent: -6 },
 ];
 
-// export const A: AMatrixItem[][] = [
+// export const A1: AMatrixItem[][] = [
 //   [
 //     { name: "x1", value: 2 },
 //     { name: "x2", value: 0.2 },
@@ -45,7 +45,7 @@ export const accuracy = [
 //   ],
 // ];
 
-// export const b = [2.7, 21.9, -3.9, 9.9];
+// export const b1 = [2.7, 21.9, -3.9, 9.9];
 // export const A: AMatrixItem[][] = [
 //   [
 //     { name: "x1", value: -8 / 8 },
